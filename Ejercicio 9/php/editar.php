@@ -14,11 +14,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $CI=$_POST["CI"];
             $telefono=$_POST["telefono"];
             $departamento=$_POST["departamento"];
-            $fechaDeNacimiento=$_POST["fecha_De_Nacimiento"];
-            $nombreCompleto=$_POST["nombre_Completo"];
+            $FECHA_DE_NACIMIENTO=$_POST["fecha_De_Nacimiento"];
+            $NOMBRE_COMPLETO=$_POST["nombre_Completo"];
             
             $sql="update persona 
-            set nombre_Completo='$nombreCompleto',fecha_De_Nacimiento='$fechaDeNacimiento',
+            set nombre_Completo='$NOMBRE_COMPLETO',fecha_De_Nacimiento='$FECHA_DE_NACIMIENTO',
             telefono='$telefono',departamento='$departamento'
             where CI=$CI;";
             $resultado = mysqli_query($con,$sql);

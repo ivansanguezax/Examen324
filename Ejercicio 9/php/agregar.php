@@ -14,11 +14,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $CI=$_POST["CI"];
             $telefono=$_POST["telefono"];
             $departamento=$_POST["departamento"];
-            $fechaDeNacimiento=$_POST["fechaDeNacimiento"];
-            $nombreCompleto=$_POST["nombreCompleto"];
+            $FECHA_DE_NACIMIENTO=$_POST["FECHA_DE_NACIMIENTO"];
+            $NOMBRE_COMPLETO=$_POST["NOMBRE_COMPLETO"];
             
-            $sql="insert into persona (CI,nombreCompleto,fechaDeNacimiento,telefono,departamento)
-            values($CI,'$nombreCompleto','$fechaDeNacimiento','$telefono','$departamento');";
+            $sql="insert into persona (CI,NOMBRE_COMPLETO,FECHA_DE_NACIMIENTO,telefono,departamento)
+            values($CI,'$NOMBRE_COMPLETO','$FECHA_DE_NACIMIENTO','$telefono','$departamento');";
             $resultado = mysqli_query($con,$sql);
 
             $existe=true;

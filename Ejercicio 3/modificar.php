@@ -16,8 +16,8 @@ if(isset($_GET["operacion"])){
     $resultado=mysqli_query($con,$sql);
     $datos=mysqli_fetch_array($resultado);
     $id=$datos["id"];
-    $nombre=$datos["nombreCompleto"];
-    $fechaNac=$datos["fechaDeNacimiento"];
+    $nombre=$datos["NOMBRE_COMPLETO"];
+    $fechaNac=$datos["FECHA_DE_NACIMIENTO"];
     $telefono=$datos["telefono"];
     $departamento=$datos["departamento"];
     $sql2="SELECT * FROM usuario where CI=$CI";
